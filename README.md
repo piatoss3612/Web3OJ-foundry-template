@@ -34,9 +34,9 @@ SENDER ?= 계정주소
 
 #### 3. [Web3OJ](https://app.web3oj.com/)에서 원하는 문제를 선택하고 인스턴스를 생성합니다.
 
-#### 4. `src` 디렉토리에 `문제번호/문제이름.sol` 파일을 찾아 문제를 풉니다.
+#### 4. 문제풀이 코드를 작성합니다.
 
-- 문제 예시
+- `src/문제번호/문제이름.sol` 파일의 `이곳에 작성하시오` 부분에 풀이를 작성합니다.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -61,12 +61,46 @@ contract MyPlusCalculator is IPlusCalculator {
 }
 ```
 
-- `이곳에 작성하시오` 부분에 문제를 푸시면 됩니다.
+- 일부 문제는 스크립트에 추가적인 코드를 작성해야 할 수 있습니다.
+- 이 경우 `script/문제번호.s.sol` 파일의 주석을 참고해 문제를 풀면 됩니다.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import {Script, console} from "forge-std/Script.sol";
+import {ERC20Transfer, MyERC20} from "src/06/ERC20Transfer.sol";
+
+contract ERC20TransferScript is Script {
+    function setUp() public {}
+
+    function solve(address instanceAddress) public {
+        vm.startBroadcast();
+
+        ERC20Transfer instance = ERC20Transfer(instanceAddress);
+
+        MyERC20 web3ojt = new MyERC20();
+
+        // 문제 인스턴스 컨트랙트에게 20 WEB3OJT를 전송합니다.
+
+        instance.setWeb3ojt(address(web3ojt));
+
+        vm.stopBroadcast();
+    }
+}
+```
 
 #### 5. 문제를 풀었다면 `make` 명령어를 사용해 시뮬레이션을 실행합니다.
 
 ```bash
 $ make simulate PROBLEM=문제번호 INSTANCE=인스턴스주소
+```
+
+- 일부 문제는 추가적인 인자를 전달해야 할 수 있습니다.
+- 이 경우 `ARGS` 변수에 인자를 전달하면 됩니다.
+
+```bash
+$ make simulate PROBLEM=문제번호 INSTANCE=인스턴스주소 ARGS="인자1 인자2"
 ```
 
 #### 6. 시뮬레이션이 성공적으로 완료되면 이번에는 풀이를 제출합니다.
@@ -76,6 +110,22 @@ $ make solve PROBLEM=문제번호 INSTANCE=인스턴스주소
 ```
 
 #### 7. 제출이 성공적으로 완료되면 [Web3OJ](https://app.web3oj.com/)에서 인스턴스를 제출합니다.
+
+## 정리
+
+| 문제번호 | 문제이름                                                     | 키워드                             |
+| -------- | ------------------------------------------------------------ | ---------------------------------- |
+| 01       | [덧셈](https://app.web3oj.com/app/problem/1)                 | 사칙연산, 인터페이스               |
+| 02       | [뺄셈](https://app.web3oj.com/app/problem/2)                 | 사칙연산, 인터페이스               |
+| 03       | [곱셈](https://app.web3oj.com/app/problem/3)                 | 사칙연산, 인터페이스               |
+| 04       | [나눗셈](https://app.web3oj.com/app/problem/4)               | 사칙연산, 인터페이스               |
+| 05       | [ERC-20 토큰 만들기](https://app.web3oj.com/app/problem/5)   | ERC20, 상속                        |
+| 06       | [ERC-20 송금](https://app.web3oj.com/app/problem/6)          | ERC20, 상속, transfer              |
+| 07       | [ERC-20 인출 허용하기](https://app.web3oj.com/app/problem/7) | ERC20, 상속, approve               |
+| 08       | [ERC-20 인출하기](https://app.web3oj.com/app/problem/8)      | ERC20, 상속, transferFrom          |
+| 09       | [ERC-20 Mint 위임하기](https://app.web3oj.com/app/problem/9) | ERC20, 상속, mint, access control  |
+| 10       | [ERC-20 소각하기](https://app.web3oj.com/app/problem/10)     | ERC20, 상속, burn                  |
+| 11       | [ERC-20 일시정지](https://app.web3oj.com/app/problem/11)     | ERC20, 상속, pause, access control |
 
 ## 로드맵
 
