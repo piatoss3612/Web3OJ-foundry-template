@@ -1,66 +1,65 @@
-## Foundry
+# Web3OJ 문제풀이 템플릿
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Foundry를 사용해 [Web3OJ](https://app.web3oj.com/) 문제를 풀고 제출하는 템플릿입니다.
 
-Foundry consists of:
+## 목차
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- [필요한 도구](#필요한-도구)
+- [문제풀이](#문제풀이)
+- [로드맵](#로드맵)
+- [기여하기](#기여하기)
+- [라이센스](#라이센스)
 
-## Documentation
+## 필요한 도구
 
-https://book.getfoundry.sh/
+- [Foundry](https://book.getfoundry.sh/getting-started/installation)
+- [Make](https://www.gnu.org/software/make/)
 
-## Usage
+## 문제풀이
 
-### Build
+#### 1. 깃허브 저장소를 클론합니다. 포크한 저장소를 클론해도 됩니다.
 
-```shell
-$ forge build
+```bash
+$ git clone https://github.com/piatoss3612/Web3OJ-foundry-template.git
 ```
 
-### Test
+#### 2. Makefile 상단에 있는 `ACCOUNT` 및 `SENDER` 변수를 수정합니다.
 
-```shell
-$ forge test
+```makefile
+ACCOUNT ?= 계정이름
+SENDER ?= 계정주소
 ```
 
-### Format
+- [Foundry를 사용해 계정 등록하기](https://piatoss3612.tistory.com/139)
 
-```shell
-$ forge fmt
+#### 3. [Web3OJ](https://app.web3oj.com/)에서 원하는 문제를 선택하고 인스턴스를 생성합니다.
+
+#### 4. `src` 디렉토리에 `문제번호/문제이름.sol` 파일을 찾아 문제를 풉니다.
+
+#### 5. 문제를 풀었다면 `make` 명령어를 사용해 시뮬레이션을 실행합니다.
+
+```bash
+$ make simulate PROBLEM=문제번호 INSTANCE=인스턴스주소
 ```
 
-### Gas Snapshots
+#### 6. 시뮬레이션이 성공적으로 완료되면 이번에는 풀이를 제출합니다.
 
-```shell
-$ forge snapshot
+```bash
+$ make solve PROBLEM=문제번호 INSTANCE=인스턴스주소
 ```
 
-### Anvil
+#### 7. 제출이 성공적으로 완료되면 [Web3OJ](https://app.web3oj.com/)에서 인스턴스를 제출합니다.
 
-```shell
-$ anvil
-```
+## 로드맵
 
-### Deploy
+- [x] 문제풀이 간소화 및 템플릿화
+- [ ] 모든 문제 추가
+- [ ] 테스트 작성
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+## 기여하기
 
-### Cast
+이 저장소는 문제풀이 템플릿을 제공하기 위한 저장소입니다. 문제풀이 템플릿을 개선하거나 문제를 추가하고 싶다면 이 저장소에 Pull Request를 보내주세요. 언제든지 환영합니다!
 
-```shell
-$ cast <subcommand>
-```
+## 라이센스
 
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- [MIT](./LICENSE)
