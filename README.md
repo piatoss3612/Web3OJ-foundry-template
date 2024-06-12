@@ -36,6 +36,33 @@ SENDER ?= 계정주소
 
 #### 4. `src` 디렉토리에 `문제번호/문제이름.sol` 파일을 찾아 문제를 풉니다.
 
+- 문제 예시
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+interface IPlusCalculator {
+    function plus(uint256, uint256) external pure returns (uint256);
+}
+
+contract PlusCalculatorProblem {
+    IPlusCalculator public plusCalculator;
+
+    function setPlusCalculator(address _plusCalculator) public {
+        plusCalculator = IPlusCalculator(_plusCalculator);
+    }
+}
+
+contract MyPlusCalculator is IPlusCalculator {
+    function plus(uint256 input1, uint256 input2) public pure override returns (uint256) {
+        // 이곳에 작성하시오
+    }
+}
+```
+
+- `이곳에 작성하시오` 부분에 문제를 푸시면 됩니다.
+
 #### 5. 문제를 풀었다면 `make` 명령어를 사용해 시뮬레이션을 실행합니다.
 
 ```bash
