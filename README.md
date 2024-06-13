@@ -90,6 +90,8 @@ contract ERC20TransferScript is Script {
 }
 ```
 
+> 문제 파일과 스크립트 파일을 모두 살펴보는 것을 추천합니다.
+
 #### 5. 문제를 풀었다면 `make` 명령어를 사용해 시뮬레이션을 실행합니다.
 
 ```bash
@@ -113,19 +115,28 @@ $ make solve PROBLEM=문제번호 INSTANCE=인스턴스주소
 
 ## 정리
 
-| 문제번호 | 문제이름                                                     | 키워드                             |
-| -------- | ------------------------------------------------------------ | ---------------------------------- |
-| 01       | [덧셈](https://app.web3oj.com/app/problem/1)                 | 사칙연산, 인터페이스               |
-| 02       | [뺄셈](https://app.web3oj.com/app/problem/2)                 | 사칙연산, 인터페이스               |
-| 03       | [곱셈](https://app.web3oj.com/app/problem/3)                 | 사칙연산, 인터페이스               |
-| 04       | [나눗셈](https://app.web3oj.com/app/problem/4)               | 사칙연산, 인터페이스               |
-| 05       | [ERC-20 토큰 만들기](https://app.web3oj.com/app/problem/5)   | ERC20, 상속                        |
-| 06       | [ERC-20 송금](https://app.web3oj.com/app/problem/6)          | ERC20, 상속, transfer              |
-| 07       | [ERC-20 인출 허용하기](https://app.web3oj.com/app/problem/7) | ERC20, 상속, approve               |
-| 08       | [ERC-20 인출하기](https://app.web3oj.com/app/problem/8)      | ERC20, 상속, transferFrom          |
-| 09       | [ERC-20 Mint 위임하기](https://app.web3oj.com/app/problem/9) | ERC20, 상속, mint, access control  |
-| 10       | [ERC-20 소각하기](https://app.web3oj.com/app/problem/10)     | ERC20, 상속, burn                  |
-| 11       | [ERC-20 일시정지](https://app.web3oj.com/app/problem/11)     | ERC20, 상속, pause, access control |
+| 문제번호 | 문제이름                                                                           | 키워드                                        |
+| -------- | ---------------------------------------------------------------------------------- | --------------------------------------------- |
+| 01       | [덧셈](https://app.web3oj.com/app/problem/1)                                       | 사칙연산, 인터페이스                          |
+| 02       | [뺄셈](https://app.web3oj.com/app/problem/2)                                       | 사칙연산, 인터페이스                          |
+| 03       | [곱셈](https://app.web3oj.com/app/problem/3)                                       | 사칙연산, 인터페이스                          |
+| 04       | [나눗셈](https://app.web3oj.com/app/problem/4)                                     | 사칙연산, 인터페이스                          |
+| 05       | [ERC-20 토큰 만들기](https://app.web3oj.com/app/problem/5)                         | ERC20, 상속                                   |
+| 06       | [ERC-20 송금](https://app.web3oj.com/app/problem/6)                                | ERC20, 상속, transfer                         |
+| 07       | [ERC-20 인출 허용하기](https://app.web3oj.com/app/problem/7)                       | ERC20, 상속, approve                          |
+| 08       | [ERC-20 인출하기](https://app.web3oj.com/app/problem/8)                            | ERC20, transferFrom, etherscan                |
+| 09       | [ERC-20 Mint 위임하기](https://app.web3oj.com/app/problem/9)                       | ERC20, 상속, mint, access control, etherscan  |
+| 10       | [ERC-20 소각하기](https://app.web3oj.com/app/problem/10)                           | ERC20, burn                                   |
+| 11       | [ERC-20 일시정지](https://app.web3oj.com/app/problem/11)                           | ERC20, pausable, access control               |
+| 12       | TODO                                                                               |                                               |
+| 13       | [ERC-721 NFT 만들기](https://app.web3oj.com/app/problem/13)                        | ERC721, 상속, 오버라이딩                      |
+| 14       | [ERC-721 인출 허용하기](https://app.web3oj.com/app/problem/14)                     | ERC721, approve                               |
+| 15       | [ERC-721 NFT 인출하기](https://app.web3oj.com/app/problem/15)                      | ERC721, transferFrom                          |
+| 16       | [ERC-721 소각하기](https://app.web3oj.com/app/problem/16)                          | ERC721, burn                                  |
+| 17       | [ERC-721 일시정지](https://app.web3oj.com/app/problem/17)                          | ERC721, pausable, access control              |
+| 18       | [ERC-721 찾아서 송금하기](https://app.web3oj.com/app/problem/18)                   | ERC721, transferFrom, etherscan               |
+| 19       | [ERC-721 Mint 위임하기](https://app.web3oj.com/app/problem/19)                     | ERC721, 상속, mint, access control, etherscan |
+| 20       | [ERC-721 Mint 위임하기(Auto Increment Ids)](https://app.web3oj.com/app/problem/20) | ERC721, 상속, mint, access control, etherscan |
 
 ## 로드맵
 
