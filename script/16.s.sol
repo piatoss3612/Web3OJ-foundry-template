@@ -2,7 +2,6 @@
 pragma solidity ^0.8.0;
 
 import {Script, console} from "forge-std/Script.sol";
-import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {Web3OnlineJudgeNFTBurnable} from "src/16/Web3OnlineJudgeNFTBurnable.sol";
 
 contract ERC721BurnableScript is Script {

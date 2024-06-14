@@ -133,10 +133,13 @@ $ make solve PROBLEM=문제번호 INSTANCE=인스턴스주소
 | 14       | [ERC-721 인출 허용하기](https://app.web3oj.com/app/problem/14)                     | ERC721, approve                               |
 | 15       | [ERC-721 NFT 인출하기](https://app.web3oj.com/app/problem/15)                      | ERC721, transferFrom                          |
 | 16       | [ERC-721 소각하기](https://app.web3oj.com/app/problem/16)                          | ERC721, burn                                  |
-| 17       | [ERC-721 일시정지](https://app.web3oj.com/app/problem/17)                          | ERC721, pausable, access control              |
+| 17       | [ERC-721 일시정지](https://app.web3oj.com/app/problem/17)                          | ERC721, Pausable, access control              |
 | 18       | [ERC-721 찾아서 송금하기](https://app.web3oj.com/app/problem/18)                   | ERC721, transferFrom, etherscan               |
 | 19       | [ERC-721 Mint 위임하기](https://app.web3oj.com/app/problem/19)                     | ERC721, 상속, mint, access control, etherscan |
 | 20       | [ERC-721 Mint 위임하기(Auto Increment Ids)](https://app.web3oj.com/app/problem/20) | ERC721, 상속, mint, access control, etherscan |
+| 21       | [Run With ABI](https://app.web3oj.com/app/problem/21)                              | ABI, Decompile, 함수 선택자                   |
+| 22       | [Private Value 찾기](https://app.web3oj.com/app/problem/22)                        | 스토리지 읽기                                 |
+| 23       | [Run With ABI2 : Delegation of Authority](https://app.web3oj.com/app/problem/23)   | ABI, Decompile, 함수 선택자, DelegateCall     |
 
 ## 로드맵
 

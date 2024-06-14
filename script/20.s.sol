@@ -2,7 +2,6 @@
 pragma solidity ^0.8.0;
 
 import {Script, console} from "forge-std/Script.sol";
-import {ERC20Mintable, MyERC20} from "src/09/ERC20Mintable.sol";
 import {ERC721Mintable2, MyERC721} from "src/20/ERC721Mintable2.sol";
 
 contract ERC721Mintable2Script is Script {
