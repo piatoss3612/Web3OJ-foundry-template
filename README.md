@@ -140,6 +140,14 @@ $ make solve PROBLEM=문제번호 INSTANCE=인스턴스주소
 | 21       | [Run With ABI](https://app.web3oj.com/app/problem/21)                              | ABI, Decompile, 함수 선택자                   |
 | 22       | [Private Value 찾기](https://app.web3oj.com/app/problem/22)                        | 스토리지 읽기                                 |
 | 23       | [Run With ABI2 : Delegation of Authority](https://app.web3oj.com/app/problem/23)   | ABI, Decompile, 함수 선택자, DelegateCall     |
+| 24       | [ETH 송금하고 받기](https://app.web3oj.com/app/problem/24)                         | payable, fallback function                    |
+| 25       | [좌물쇠 풀기](https://app.web3oj.com/app/problem/25)                               | tx.origin, 전역변수                           |
+| 26       | [문자열 비교](https://app.web3oj.com/app/problem/26)                               | string, bytes                                 |
+| 27       | [에러 메시지 처리하기](https://app.web3oj.com/app/problem/27)                      | try-catch, error handling                     |
+| 28       | [에러 코드 처리하기](https://app.web3oj.com/app/problem/28)                        | try-catch, error handling                     |
+| 29       | [에러 데이터 처리하기](https://app.web3oj.com/app/problem/29)                      | try-catch, error handling, abi decoding       |
+| 30       | [배열의 합 구하기](https://app.web3oj.com/app/problem/30)                          | gas optimization                              |
+| 31       | [휴면계좌에 이더 넣기](https://app.web3oj.com/app/problem/31)                      | selfdestruct                                  |
 
 ## 로드맵
 
