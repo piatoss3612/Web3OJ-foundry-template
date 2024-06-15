@@ -1,6 +1,6 @@
 # Web3OJ 문제풀이 템플릿
 
-Foundry를 사용해 [Web3OJ](https://app.web3oj.com/) 문제를 풀고 제출하는 템플릿입니다.
+Foundry를 사용해 [Web3OJ](https://app.web3oj.com/) 문제를 풀 수 있는 템플릿입니다.
 
 ## 목차
 
@@ -30,7 +30,7 @@ ACCOUNT ?= 계정이름
 SENDER ?= 계정주소
 ```
 
-- [Foundry를 사용해 계정 등록하기](https://piatoss3612.tistory.com/139)
+- [Foundry를 사용해 계정 등록하기](https://piatoss3612.tistory.com/139)를 참고해 주세요.
 
 #### 3. [Web3OJ](https://app.web3oj.com/)에서 원하는 문제를 선택하고 인스턴스를 생성합니다.
 

@@ -1,7 +1,7 @@
 PROBLEM ?= 0
 RPC_URL ?= sepolia
-ACCOUNT ?= piatoss
-SENDER ?= 0x965B0E63e00E7805569ee3B428Cf96330DFc57EF
+ACCOUNT ?= user
+SENDER ?= 0x0
 INSTANCE ?= 0x0
 
 # additional arguments
