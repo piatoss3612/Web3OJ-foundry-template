@@ -4,6 +4,7 @@ out = "out"
 libs = ["lib"]
 evm_version = "shanghai"
 verbosity = 5
+ffi = true
 
 [rpc_endpoints]
 sepolia = "https://ethereum-sepolia-rpc.publicnode.com"

@@ -128,7 +128,7 @@ $ make solve PROBLEM=문제번호 INSTANCE=인스턴스주소
 | 09       | [ERC-20 Mint 위임하기](https://app.web3oj.com/app/problem/9)                       | ERC20, 상속, mint, access control, etherscan  |
 | 10       | [ERC-20 소각하기](https://app.web3oj.com/app/problem/10)                           | ERC20, burn                                   |
 | 11       | [ERC-20 일시정지](https://app.web3oj.com/app/problem/11)                           | ERC20, pausable, access control               |
-| 12       | TODO                                                                               |                                               |
+| 12       | [ERC-20 Permit](https://app.web3oj.com/app/problem/12)                             | ERC20, ERC2612, EIP712, ECDSA                 |
 | 13       | [ERC-721 NFT 만들기](https://app.web3oj.com/app/problem/13)                        | ERC721, 상속, 오버라이딩                      |
 | 14       | [ERC-721 인출 허용하기](https://app.web3oj.com/app/problem/14)                     | ERC721, approve                               |
 | 15       | [ERC-721 NFT 인출하기](https://app.web3oj.com/app/problem/15)                      | ERC721, transferFrom                          |
@@ -152,7 +152,7 @@ $ make solve PROBLEM=문제번호 INSTANCE=인스턴스주소
 ## 로드맵
 
 - [x] 문제풀이 간소화 및 템플릿화
-- [ ] 모든 문제 추가
+- [x] 모든 문제 추가
 - [ ] 테스트 작성
 
 ## 기여하기
