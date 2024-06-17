@@ -1,0 +1,50 @@
+{
+  "transactions": [
+    {
+      "hash": null,
+      "transactionType": "CREATE",
+      "contractName": "MyDivisionCalculator",
+      "contractAddress": "0x10e0cfae0da6e249f928e562f205b9ef63d96c78",
+      "function": null,
+      "arguments": null,
+      "transaction": {
+        "from": "0x965b0e63e00e7805569ee3b428cf96330dfc57ef",
+        "gas": "0x1f1ab",
+        "value": "0x0",
+        "input": "0x608060405234801561000f575f80fd5b5060ce8061001c5f395ff3fe6080604052348015600e575f80fd5b50600436106026575f3560e01c8063f88e9fbf14602a575b5f80fd5b60396035366004605b565b604b565b60405190815260200160405180910390f35b5f60548284607a565b9392505050565b5f8060408385031215606b575f80fd5b50508035926020909101359150565b5f82609357634e487b7160e01b5f52601260045260245ffd5b50049056fea2646970667358221220d74b03c0a0e569b4682cf4b4b99ebf22f988496996097607ffdace0c2056c1b064736f6c63430008180033",
+        "nonce": "0x252",
+        "chainId": "0xaa36a7"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    },
+    {
+      "hash": null,
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0x53ef3f6cd5f3472dc9980ee72e007e8681c2e308",
+      "function": "setDivisionCalculator(address)",
+      "arguments": [
+        "0x10E0cfaE0da6E249F928e562f205b9eF63d96c78"
+      ],
+      "transaction": {
+        "from": "0x965b0e63e00e7805569ee3b428cf96330dfc57ef",
+        "to": "0x53ef3f6cd5f3472dc9980ee72e007e8681c2e308",
+        "gas": "0xed93",
+        "value": "0x0",
+        "input": "0x30980f1700000000000000000000000010e0cfae0da6e249f928e562f205b9ef63d96c78",
+        "nonce": "0x253",
+        "chainId": "0xaa36a7"
+      },
+      "additionalContracts": [],
+      "isFixedGasLimit": false
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [],
+  "returns": {},
+  "timestamp": 1718594037,
+  "chain": 11155111,
+  "commit": "7ceb0b7"
+}

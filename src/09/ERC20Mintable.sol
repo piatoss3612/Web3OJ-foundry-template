@@ -15,5 +15,19 @@ contract ERC20Mintable {
     }
 }
 
-// 이곳에 작성하시오
-contract MyERC20 {}
+contract MyERC20 is ERC20, ERC20Mintable {
+    address public minter;
+
+    modifier onlyMinter() {
+        require(_msgSender() == minter, "MyERC20: caller is not the minter");
+        _;
+    }
+
+    constructor(address _minter) ERC20("Web3 Online Judge Token", "WEB3ojt") {
+        minter = _minter;
+    }
+
+    function mint(address to, uint256 amount) external onlyMinter {
+        _mint(to, amount);
+    }
+}

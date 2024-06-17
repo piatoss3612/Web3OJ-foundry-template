@@ -11,5 +11,8 @@ contract ERC20Init {
     }
 }
 
-// 이곳에 작성하시오
-contract MyERC20 {}
+contract MyERC20 is ERC20 {
+    constructor() ERC20("Web3 Online Judge Token", "WEB3OJT") {
+        _mint(msg.sender, 2000000000 * 10 ** decimals());
+    }
+}

@@ -12,7 +12,7 @@ contract Web3OJTPausableScript is Script {
 
         Web3OJTPausable instance = Web3OJTPausable(instanceAddress);
 
-        // 토큰 컨트랙트 사용을 일시 중지합니다.
+        instance.pause();
 
         vm.stopBroadcast();
     }

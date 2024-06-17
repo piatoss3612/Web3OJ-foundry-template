@@ -14,7 +14,7 @@ contract ERC20ApproveScript is Script {
 
         MyERC20 web3ojt = new MyERC20();
 
-        // 문제 인스턴스 컨트랙트에게 20 WEB3OJT 인출을 허용합니다.
+        web3ojt.approve(instanceAddress, 20 * 10 ** web3ojt.decimals());
 
         instance.setWeb3ojt(address(web3ojt));
 

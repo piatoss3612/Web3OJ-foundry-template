@@ -12,7 +12,7 @@ contract ERC20BurnableTokenScript is Script {
 
         ERC20BurnableToken instance = ERC20BurnableToken(instanceAddress);
 
-        // 문제 인스턴스를 호출하여 20 WEB3OJT를 소각합니다.
+        instance.burn(20 * 10 ** instance.decimals());
 
         vm.stopBroadcast();
     }

@@ -14,7 +14,7 @@ contract ERC20TransferScript is Script {
 
         MyERC20 web3ojt = new MyERC20();
 
-        // 문제 인스턴스 컨트랙트에게 20 WEB3OJT를 전송합니다.
+        web3ojt.transfer(address(instance), 20 * 10 ** web3ojt.decimals());
 
         instance.setWeb3ojt(address(web3ojt));
 
