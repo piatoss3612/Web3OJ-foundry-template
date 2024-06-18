@@ -12,11 +12,8 @@ contract ERC721MintableScript is Script {
 
         ERC721Mintable instance = ERC721Mintable(instanceAddress);
 
-        /* 
-            1. https://sepolia.etherscan.io - 블록 탐색기에서 instanceOwner 주소를 확인합니다.
-            2. instanceOwner에게 MyERC721 토큰의 mint 권한을 부여합니다.
-        */
-        MyERC721 myERC721 = new MyERC721();
+        MyERC721 myERC721 = new MyERC721(instanceOwner);
+
         instance.setToken(address(myERC721));
 
         vm.stopBroadcast();

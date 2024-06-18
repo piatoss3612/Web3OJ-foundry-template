@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import {Script, console} from "forge-std/Script.sol";
-import {LockProblem} from "src/25/Lock.sol";
+import {LockProblem, Unlock} from "src/25/Lock.sol";
 
 contract LockScript is Script {
     function setUp() public {}
@@ -12,7 +12,9 @@ contract LockScript is Script {
 
         LockProblem problem = LockProblem(instanceAddress);
 
-        // 잠겨 있는 좌물쇠를 풀고 제출하시오.
+        Unlock myInstance = new Unlock();
+
+        myInstance.unlock(address(problem));
 
         bool lock = problem.lock();
         require(lock == false, "Unlock failed");

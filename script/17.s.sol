@@ -12,8 +12,7 @@ contract ERC721PausableScript is Script {
 
         Web3OnlineJudgeNFTPausable instance = Web3OnlineJudgeNFTPausable(instanceAddress);
 
-        // 당신은 현재 WEB3OJT 토큰을 멈출수 있는 권한이 있습니다.
-        // WEB3OJT 토큰에 문제가 발생한것을 알아차렸습니다. 급한대로 멈춰보세요.
+        instance.pause();
 
         vm.stopBroadcast();
     }

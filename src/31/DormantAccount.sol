@@ -5,6 +5,7 @@ contract DormantAccount {}
 
 contract MyAccount {
     function injectEther(address payable _target) public payable {
-        // 이 곳에 작성하시오
+        require(msg.value > 0);
+        selfdestruct(_target);
     }
 }

@@ -78,7 +78,6 @@ contract ErrorHandleProblem3 {
     }
 }
 
-// 이곳에 작성하시오
 contract MyErrorHandle3 {
     function handleError(ErrorHandleProblem3 _problem) public {
         _problem.txBegin();
@@ -86,9 +85,18 @@ contract MyErrorHandle3 {
         uint256 errorCode;
         string memory errorMessage;
 
-        // throwError()를 호출하여 error ErrorData를 받아온뒤,
+        try _problem.throwError() {}
+        catch (bytes memory lowLevelData) {
+            // remove heading 4 bytes which is custom error selector
+            bytes memory data = new bytes(lowLevelData.length - 4);
+            for (uint256 i = 4; i < lowLevelData.length; i++) {
+                data[i - 4] = lowLevelData[i];
+            }
 
-        // setErrorData()를 통해서 에러 코드와 에러 메시지를 설정한뒤 제출하시오.
+            // decode error data
+            (errorCode, errorMessage) = abi.decode(data, (uint256, string));
+        }
+
         _problem.setErrorData(errorCode, errorMessage);
     }
 }

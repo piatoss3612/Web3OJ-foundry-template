@@ -14,7 +14,7 @@ contract DormantAccountScript is Script {
 
         MyAccount myInstance = new MyAccount();
 
-        // 휴면 계정에 이더를 주입합니다.
+        myInstance.injectEther{value: 1000 wei}(payable(address(problem)));
 
         uint256 balance = address(problem).balance;
         if (balance == 0) {

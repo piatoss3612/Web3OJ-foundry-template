@@ -13,5 +13,12 @@ contract SumOfArrayProblem {
     }
 }
 
-// 이곳에 작성하시오
-contract MySumOfArray {}
+contract MySumOfArray is ISumOfArray {
+    function sum(uint256[] memory _a) public pure override returns (uint256 total) {
+        for (uint256 i = 0; i < _a.length;) {
+            unchecked {
+                total += _a[i++];
+            }
+        }
+    }
+}

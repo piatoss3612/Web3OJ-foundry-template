@@ -15,3 +15,10 @@ contract LockProblem {
         lock = false;
     }
 }
+
+contract Unlock {
+    function unlock(address _lockAddress) public {
+        (bool ok,) = _lockAddress.call(abi.encodeWithSelector(LockProblem.unlock.selector));
+        require(ok, "unlock failed");
+    }
+}

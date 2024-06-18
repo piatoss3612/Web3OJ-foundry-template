@@ -14,12 +14,11 @@ contract RunWithABI2Script is Script {
 
         MyRunWithABI2 myInstance = new MyRunWithABI2();
 
-        // 1. 문제 Contract에 privateKey 생성
+        (bool ok,) = instanceAddress.call(abi.encodePacked(bytes4(0xa6e5ca07)));
+        require(ok, "call failed");
 
-        // 2. 정답 Contract의 privateKey 변수에 문제 Contract의 privateKey 탈취하여 설정
         myInstance.setPrivateKey(address(problem));
 
-        // 3. 정답 Contract를 문제 Contract의 setRunWithABI2함수를 이용하여 등록한뒤 제출
         problem.setRunWithABI2(address(myInstance));
 
         vm.stopBroadcast();

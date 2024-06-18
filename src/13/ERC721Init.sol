@@ -12,5 +12,12 @@ contract ERC721Init {
     }
 }
 
-// 이곳에 작성하시오
-contract MyERC721 {}
+contract MyERC721 is ERC721 {
+    constructor() ERC721("Web3 Online Judge NFT", "WEB3OJNFT") {
+        _mint(msg.sender, 0);
+    }
+
+    function _baseURI() internal pure override returns (string memory) {
+        return "https://app.web3oj.com/web3ojnft/";
+    }
+}

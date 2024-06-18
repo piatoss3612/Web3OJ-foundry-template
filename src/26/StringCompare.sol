@@ -13,5 +13,8 @@ contract StringCompareProblem {
     }
 }
 
-// 이곳에 작성하시오
-contract MyStringCompare {}
+contract MyStringCompare is IStringCompare {
+    function compare(string memory _a, string memory _b) public pure override returns (bool) {
+        return keccak256(abi.encodePacked(_a)) == keccak256(abi.encodePacked(_b));
+    }
+}

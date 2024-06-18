@@ -15,5 +15,19 @@ contract ERC721Mintable {
     }
 }
 
-// 여기에 작성하시오.
-contract MyERC721 {}
+contract MyERC721 is ERC721, IERC721Mintable {
+    address public minter;
+
+    modifier onlyMinter() {
+        require(_msgSender() == minter, "MyERC721: caller is not the minter");
+        _;
+    }
+
+    constructor(address _minter) ERC721("MyERC721", "MYE") {
+        minter = _minter;
+    }
+
+    function mint(address to, uint256 tokenId) public onlyMinter {
+        _safeMint(to, tokenId);
+    }
+}

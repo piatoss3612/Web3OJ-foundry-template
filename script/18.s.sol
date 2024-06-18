@@ -12,11 +12,12 @@ contract ERC721PausableScript is Script {
 
         Web3OnlineJudgeNFTFind instance = Web3OnlineJudgeNFTFind(instanceAddress);
 
-        // 당신은 랜덤한 값의 tokenId의 WEB3OJT 토큰 소유하고 있습니다.
-        // 어떤 tokenId를 소유하고 있는지 Blockchain Explorer를 이용하여 찾은 후, 문제 인스턴스 컨트랙트에게 송금하시오.
-
         address sender = msg.sender;
         uint256 tokenId;
+
+        // tokenId를 찾아서 tokenId 변수에 할당하시오.
+
+        instance.transferFrom(sender, instanceAddress, tokenId);
 
         vm.stopBroadcast();
     }

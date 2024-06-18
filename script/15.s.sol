@@ -14,8 +14,9 @@ contract ERC721TransferFromScript is Script {
 
         address sender = msg.sender;
 
-        // 당신은 token ID가 0인 WEB3OJNFT를 인출할 수 있습니다. 이 토큰을 인출해보시오
-        address tokenOwner;
+        address tokenOwner = instance.ownerOf(0);
+
+        instance.transferFrom(tokenOwner, sender, 0);
 
         vm.stopBroadcast();
     }

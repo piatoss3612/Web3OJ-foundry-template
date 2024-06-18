@@ -11,8 +11,7 @@ contract RunWithABIScript is Script {
 
         address sender = msg.sender;
 
-        // 문제 Contract에서 주소를 등록하는 Function의 ABI를 직접 찾아내어 실행하는 방법으로 당신의 주소를 등록해야 합니다.
-        bytes4 selector = 0x0; // 선택자를 ABI로 찾아내어 입력해주세요.
+        bytes4 selector = 0xda17c605;
         bytes memory data = abi.encodeWithSelector(selector, sender);
 
         (bool success,) = instanceAddress.call(data);

@@ -13,6 +13,8 @@ contract ReceiveEtherFunctionScript is Script {
         ReceiveEtherFunctionProblem problem = ReceiveEtherFunctionProblem(instanceAddress);
 
         // 먼저 일반지갑으로 문제 컨트랙트에게 이더를 송금하고,
+        bool ok = payable(instanceAddress).send(1000 wei);
+        require(ok, "send failed");
 
         // 송금한 이더를 다시 돌려받을 컨트랙트를 작성하고
         MyReceiveEther myInstance = new MyReceiveEther();

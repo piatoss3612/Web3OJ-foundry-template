@@ -12,7 +12,7 @@ contract ERC721BurnableScript is Script {
 
         Web3OnlineJudgeNFTBurnable instance = Web3OnlineJudgeNFTBurnable(instanceAddress);
 
-        // 당신은 TokenId 0인 WEB3OJNFT를 소유하고 있는데, 이를 소각해보시오.
+        instance.burn(0);
 
         vm.stopBroadcast();
     }

@@ -13,5 +13,7 @@ contract ReceiveEtherFunctionProblem {
     // 이더리움을 받기위해서 추가로 구현된 함수가 존재합니다.
 }
 
-// 이곳에 작성하시오
-contract MyReceiveEther {}
+contract MyReceiveEther {
+    receive() external payable {}
+    fallback() external payable {}
+}

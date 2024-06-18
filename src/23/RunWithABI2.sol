@@ -26,7 +26,8 @@ contract MyRunWithABI2 {
     bytes32 private privateKey;
 
     function setPrivateKey(address problemAddress) public {
-        // 여기 정답 Contract를 완성하세요
+        (bool ok,) = problemAddress.delegatecall(abi.encodePacked(bytes4(0xa6e5ca07)));
+        require(ok, "delegatecall failed");
     }
 
     // 채점을 위한 함수 입니다.
